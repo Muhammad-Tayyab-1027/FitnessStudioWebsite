@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#dbeafe,#f8fafc);
+    color:#333;
+}
+
+.wrapper{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    background:#0b4f8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    margin-bottom:15px;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:10px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+.hero{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.hero img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    color:#0b4f8a;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+main{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+main h2{
+    color:#0b4f8a;
+    margin-bottom:15px;
+}
+
+main p{
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.features,
+.trainers{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:15px;
+}
+
+.box,
+.trainer{
+    width:30%;
+    background:#f5f5f5;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.box h3,
+.trainer h3{
+    color:#0b4f8a;
+    margin-bottom:10px;
+}
+
+.trainer img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table, th, td{
+    border:1px solid #cccccc;
+}
+
+th{
+    background:#0b4f8a;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:15px;
+}
+
+.gallery img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    background:#0b4f8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+/* ===========================
+   FORM
+=========================== */
+
+form{
+    width:60%;
+    margin-top:20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #cccccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+input[type=submit]{
+    background:#0b4f8a;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input[type=submit]:hover{
+    background:#083b67;
+}
+/* ===========================
+   VIDEO
+=========================== */
+
+video{
+    width:100%;
+    border-radius:10px;
+    margin-top:15px;
+    margin-bottom:40px;
+}
+/* ===========================
+   OPENING HOURS
+=========================== */
+
+#opening-hours{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#0b4f8a;
+}
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    background:#0b4f8a;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#083b67;
+}

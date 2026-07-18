@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes | FitLife Gym</title>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+
+<h1>FitLife Gym</h1>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="classes.html">Classes</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="join.html">Join Us</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<h2>Fitness Classes</h2>
+
+<p>
+We offer a variety of fitness classes throughout the week. Choose a class that matches your fitness goals.
+</p>
+
+<h2>Weekly Class Schedule</h2>
+<label for="dayFilter">Filter by Day:</label>
+
+<select id="dayFilter">
+    <option value="all">All</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+</select>
+
+<br><br>
+<br><br>
+
+<table>
+
+<tr>
+    <th>Day</th>
+    <th>Class</th>
+    <th>Time</th>
+</tr>
+
+<tr class="class-row" data-day="Monday">
+    <td>Monday</td>
+    <td>Yoga</td>
+    <td>9:00 AM</td>
+</tr>
+
+<tr class="class-row" data-day="Tuesday">
+    <td>Tuesday</td>
+    <td>Pilates</td>
+    <td>6:00 PM</td>
+</tr>
+
+<tr class="class-row" data-day="Wednesday">
+    <td>Wednesday</td>
+    <td>Spin Class</td>
+    <td>7:00 PM</td>
+</tr>
+
+<tr class="class-row" data-day="Thursday">
+    <td>Thursday</td>
+    <td>Strength Training</td>
+    <td>5:30 PM</td>
+</tr>
+
+<tr class="class-row" data-day="Friday">
+    <td>Friday</td>
+    <td>Zumba</td>
+    <td>6:30 PM</td>
+</tr>
+
+</table>
+
+</main>
+
+<footer>
+
+<p>&copy; 2026 FitLife Gym. All Rights Reserved.</p>
+
+</footer>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

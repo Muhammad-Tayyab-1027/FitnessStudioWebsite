@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Us | FitLife Gym</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+<h1>FitLife Gym</h1>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="classes.html">Classes</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="join.html">Join Us</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<h2>Membership Registration</h2>
+
+<p>Please complete the form below to become a member of FitLife Gym.</p>
+
+<form action="confirmation.html" method="get">
+
+<label for="name">Full Name:</label><br>
+<input type="text" id="name" name="name" required><br><br>
+
+<label for="email">Email Address:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="phone">Phone Number:</label><br>
+<input type="tel" id="phone" name="phone"><br><br>
+
+<label for="membership">Membership Type:</label><br>
+<select id="membership" name="membership">
+<option value="monthly">Monthly</option>
+<option value="quarterly">Quarterly</option>
+<option value="yearly">Yearly</option>
+</select>
+
+<br><br>
+
+<label>Preferred Class:</label><br>
+<input type="radio" name="class" value="Yoga"> Yoga<br>
+<input type="radio" name="class" value="Pilates"> Pilates<br>
+<input type="radio" name="class" value="Spin Class"> Spin Class<br>
+<input type="radio" name="class" value="Strength Training"> Strength Training<br>
+<input type="radio" name="class" value="Zumba"> Zumba<br>
+
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="5"></textarea>
+
+<br><br>
+
+<input type="submit" value="Join Now">
+
+</form>
+
+</main>
+
+<footer>
+<p>&copy; 2026 FitLife Gym. All Rights Reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
