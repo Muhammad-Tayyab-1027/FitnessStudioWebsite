@@ -250,3 +250,95 @@ button{
 button:hover{
     background:#083b67;
 }
+
+/* ===========================
+   RESPONSIVE DESIGN
+   (Technical Merit feature)
+=========================== */
+
+/* Tablet */
+@media (max-width: 900px){
+
+    .wrapper{
+        width:95%;
+    }
+
+    .box,
+    .trainer{
+        width:47%;
+    }
+
+    .features,
+    .trainers{
+        flex-wrap:wrap;
+    }
+
+    form{
+        width:80%;
+    }
+}
+
+/* Mobile phone */
+@media (max-width: 600px){
+
+    header h1{
+        font-size:26px;
+    }
+
+    nav ul li{
+        display:block;
+        margin:8px 0;
+    }
+
+    .hero img{
+        height:220px;
+    }
+
+    .box,
+    .trainer{
+        width:100%;
+    }
+
+    .gallery img{
+        width:100%;
+        height:auto;
+    }
+
+    form{
+        width:100%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr{
+        display:block;
+    }
+
+    table tr{
+        margin-bottom:10px;
+        border:1px solid #cccccc;
+        border-radius:5px;
+    }
+
+    table th{
+        display:none;
+    }
+
+    table td{
+        text-align:left;
+        padding:10px 15px;
+        border:none;
+        border-bottom:1px solid #eeeeee;
+    }
+
+    table td::before{
+        content:attr(data-label);
+        font-weight:bold;
+        color:#0b4f8a;
+        display:inline-block;
+        width:80px;
+    }
+}
