@@ -1,10 +1,11 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 import { cancelGeneration, submitGeneration } from "@/generation/actions"
 import { getModel } from "@/generation/catalog"
 import type { GenerationPlane } from "@/generation/catalog"
+import type { FailureCode } from "@/generation/errors"
 import type { GenerationStatus } from "@/generation/platform"
 import { stopWatching, watchRequest } from "@/generation/poll"
 
@@ -24,6 +25,13 @@ export function useRuns() {
   const [records, setRecords] = useState<RunRecord[]>([])
   const [loaded, setLoaded] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  // State lags a render behind; the ref closes the double-click window at once.
+  const submittingRef = useRef(false)
+  const recordsRef = useRef(records)
+  useEffect(() => {
+    recordsRef.current = records
+  }, [records])
 
   const update = useCallback((id: string, patch: Partial<RunRecord>) => {
     setRecords((current) =>
@@ -70,11 +78,19 @@ export function useRuns() {
     async (
       plane: GenerationPlane,
       projectId?: string
-    ): Promise<RunRecord | null> => {
+    ): Promise<{ record: RunRecord | null; code?: FailureCode }> => {
+      if (submittingRef.current) return { record: null }
+      submittingRef.current = true
+      setSubmitting(true)
       setError(null)
       const model = getModel(plane.model)
       try {
-        const queued = await submitGeneration(plane)
+        const result = await submitGeneration(plane)
+        if (!result.ok) {
+          setError(result.error)
+          return { record: null, code: result.code }
+        }
+        const { queued } = result
         const record: RunRecord = {
           id: queued.requestId,
           requestId: queued.requestId,
@@ -89,12 +105,18 @@ export function useRuns() {
           urls: [],
           createdAt: Date.now(),
         }
+        // The server collapses duplicate submits onto one request_id.
+        if (recordsRef.current.some((r) => r.requestId === record.requestId))
+          return { record: null }
         setRecords((current) => [record, ...current])
         watch(record)
-        return record
+        return { record }
       } catch (caught) {
         setError(caught instanceof Error ? caught.message : String(caught))
-        return null
+        return { record: null }
+      } finally {
+        submittingRef.current = false
+        setSubmitting(false)
       }
     },
     [watch]
@@ -105,8 +127,11 @@ export function useRuns() {
       const record = records.find((r) => r.id === id)
       if (!record || record.status !== "running") return
       try {
-        await cancelGeneration({ requestIds: [record.requestId] })
-        update(id, { status: "failed", error: "Canceled" })
+        const result = await cancelGeneration({
+          requestIds: [record.requestId],
+        })
+        if (result.ok) update(id, { status: "failed", error: "Canceled" })
+        else setError(result.error)
       } catch (caught) {
         setError(caught instanceof Error ? caught.message : String(caught))
       }
@@ -120,7 +145,17 @@ export function useRuns() {
 
   const running = records.filter((r) => r.status === "running")
 
-  return { records, running, loaded, error, submit, cancel, remove, setError }
+  return {
+    records,
+    running,
+    loaded,
+    error,
+    submitting,
+    submit,
+    cancel,
+    remove,
+    setError,
+  }
 }
 
 function settle(status: GenerationStatus): Partial<RunRecord> {

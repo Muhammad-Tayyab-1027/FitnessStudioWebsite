@@ -3,6 +3,7 @@
 
 import type { ReactNode } from "react"
 import {
+  ArrowLeft,
   House,
   Images,
   KeyRound,
@@ -42,6 +43,8 @@ export interface StudioSidebarProps {
   onCollapsedChange: (collapsed: boolean) => void
   keyConfigured: boolean
   onOpenKey: () => void
+  /** Optional link out to the product's main site, above the key row. */
+  siteLink?: { label: string; href: string }
 }
 
 function Row({
@@ -52,6 +55,7 @@ function Row({
   meta,
   action,
   onClick,
+  href,
   ariaLabel,
 }: {
   selected?: boolean
@@ -61,8 +65,12 @@ function Row({
   meta?: ReactNode
   action?: ReactNode
   onClick?: () => void
+  /** Renders the row as a link instead of a button. */
+  href?: string
   ariaLabel?: string
 }) {
+  const hit =
+    "absolute inset-0 z-[1] rounded-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
   const row = (
     <div
       className={cn(
@@ -73,13 +81,17 @@ function Row({
         collapsed && "justify-center px-0"
       )}
     >
-      <button
-        type="button"
-        aria-label={ariaLabel}
-        aria-current={selected ? "page" : undefined}
-        className="absolute inset-0 z-[1] rounded-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-        onClick={onClick}
-      />
+      {href ? (
+        <a href={href} aria-label={ariaLabel} className={hit} />
+      ) : (
+        <button
+          type="button"
+          aria-label={ariaLabel}
+          aria-current={selected ? "page" : undefined}
+          className={hit}
+          onClick={onClick}
+        />
+      )}
       <span className="pointer-events-none relative shrink-0">{start}</span>
       {!collapsed ? (
         <>
@@ -128,6 +140,7 @@ export function StudioSidebar({
   onCollapsedChange,
   keyConfigured,
   onOpenKey,
+  siteLink,
 }: StudioSidebarProps) {
   return (
     <aside
@@ -252,7 +265,20 @@ export function StudioSidebar({
         </div>
       </nav>
 
-      <div className="pt-2">
+      <div className="flex flex-col gap-0.5 pt-2">
+        {siteLink ? (
+          <Row
+            collapsed={collapsed}
+            href={siteLink.href}
+            ariaLabel={siteLink.label}
+            start={
+              <span className="flex size-6 items-center justify-center rounded-md border border-white/10 bg-white/5 text-muted-foreground">
+                <ArrowLeft className="size-3.5" />
+              </span>
+            }
+            title={siteLink.label}
+          />
+        ) : null}
         <Row
           collapsed={collapsed}
           onClick={onOpenKey}

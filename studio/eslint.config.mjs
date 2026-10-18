@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // FitLife static site copied in by scripts/sync-site.mjs.
+    "public/js/**",
+    "public/lightbox/**",
   ]),
 ]);
 

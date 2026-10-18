@@ -23,10 +23,10 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 })
 
-// Replace with the product's own identity when adapting the scaffold.
 export const metadata: Metadata = {
-  title: "Studio",
-  description: "Generate images and video with Higgsfield models.",
+  title: "FitLife AI Studio",
+  description:
+    "Create gym promos, class teasers, trainer portraits and posters for FitLife Gym with Higgsfield image and video models.",
 }
 
 export const viewport: Viewport = { themeColor: "#131416" }

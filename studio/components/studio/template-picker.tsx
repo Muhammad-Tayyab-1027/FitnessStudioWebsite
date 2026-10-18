@@ -3,10 +3,10 @@
 
 import type { KeyboardEvent, ReactNode } from "react"
 import {
-  BatteryFull,
-  Calendar,
-  House,
-  WandSparkles,
+  Clapperboard,
+  Dumbbell,
+  Megaphone,
+  UserRound,
   type LucideIcon,
 } from "lucide-react"
 
@@ -14,20 +14,25 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 /**
- * Templates — the "what you can make" examples. A `TemplateItem` seeds the
+ * Templates — FitLife's "what you can make" examples. A `TemplateItem` seeds the
  * prompt dock (prompt text + optional model/settings) when its Try action fires.
  * `TemplateCard` and `ExamplePresets` render them; the Explore tab on Home uses
  * `ExamplePresets`.
  */
 
-// PLACEHOLDER ASSETS — demo art in /presets/*.svg. An adapted app replaces
-// every template with bespoke, app-specific examples and real preview media.
-const THUMBS = [
-  "/presets/placeholder-1.svg",
-  "/presets/placeholder-2.svg",
-  "/presets/placeholder-3.svg",
-  "/presets/placeholder-4.svg",
-] as const
+// FitLife's own gym photography, served from /presets.
+const PHOTO = {
+  barbell: "/presets/barbell.jpg",
+  cardioDeck: "/presets/cardio-deck.jpg",
+  classStudio: "/presets/class-studio.jpg",
+  gymFloor: "/presets/gym-floor.jpg",
+  runner: "/presets/runner.jpg",
+  trainerCoaching: "/presets/trainer-coaching.jpg",
+  trainerPortrait: "/presets/trainer-portrait.jpg",
+  trainerSeated: "/presets/trainer-seated.jpg",
+  treadmills: "/presets/treadmills.jpg",
+  weights: "/presets/weights.jpg",
+} as const
 
 export interface TemplateItem {
   id: string
@@ -45,51 +50,50 @@ export interface TemplateItem {
   settings?: Record<string, unknown>
 }
 
-// PLACEHOLDER content — replace when adapting.
 export const TEMPLATES: TemplateItem[] = [
   {
-    id: "product-hero",
-    title: "Product hero shot",
-    subtitle: "Studio lighting, larger than life",
-    category: "commercial",
+    id: "gym-promo-reel",
+    title: "Gym promo reel",
+    subtitle: "Cinematic tour of the training floor",
+    category: "promo",
     kind: "video",
-    images: [THUMBS[0], THUMBS[1], THUMBS[2]],
-    icon: BatteryFull,
+    images: [PHOTO.gymFloor, PHOTO.barbell, PHOTO.weights],
+    icon: Clapperboard,
     prompt:
-      "Cinematic product hero shot on a dark studio backdrop, slow orbit, soft rim light, dust particles catching the light.",
+      "Cinematic promo of a modern gym at dawn: slow dolly past dumbbell racks, a member lifting a loaded barbell with chalk dust in the air, warm rim light, energetic pace.",
   },
   {
-    id: "ugc-review",
-    title: "UGC review",
-    subtitle: "Handheld, creator-style",
-    category: "ugc",
+    id: "class-teaser",
+    title: "Class teaser",
+    subtitle: "Yoga, Pilates or Zumba in motion",
+    category: "classes",
     kind: "video",
-    images: [THUMBS[1], THUMBS[3], THUMBS[0]],
-    icon: WandSparkles,
+    images: [PHOTO.classStudio, PHOTO.treadmills, PHOTO.cardioDeck],
+    icon: UserRound,
     prompt:
-      "Handheld creator-style review filmed on a phone in a sunny kitchen, natural light, casual framing, subtle camera shake.",
+      "Bright group yoga class in a sunlit studio, members flowing into side stretches in unison, smooth tracking shot along the mats, calm and uplifting mood.",
   },
   {
-    id: "editorial-still",
-    title: "Editorial still",
-    subtitle: "Magazine-grade key visual",
-    category: "commercial",
+    id: "trainer-spotlight",
+    title: "Trainer spotlight",
+    subtitle: "Editorial portrait for the team page",
+    category: "people",
     kind: "image",
-    images: [THUMBS[2], THUMBS[0], THUMBS[1]],
-    icon: Calendar,
+    images: [PHOTO.trainerPortrait, PHOTO.trainerSeated, PHOTO.trainerCoaching],
+    icon: Dumbbell,
     prompt:
-      "Editorial fashion still, 85mm, shallow depth of field, muted palette, single hard light from the left.",
+      "Editorial portrait of a personal trainer in a black tank top, dramatic side light, dark gym background, confident smile, 85mm, shallow depth of field.",
   },
   {
-    id: "lifestyle-home",
-    title: "Lifestyle at home",
-    subtitle: "Warm three-shot story",
-    category: "ugc",
+    id: "membership-poster",
+    title: "Membership poster",
+    subtitle: "Bold key visual for the Join Us offer",
+    category: "promo",
     kind: "image",
-    images: [THUMBS[3], THUMBS[2], THUMBS[0]],
-    icon: House,
+    images: [PHOTO.runner, PHOTO.treadmills, PHOTO.cardioDeck],
+    icon: Megaphone,
     prompt:
-      "Warm lifestyle photo of a couple at home in the evening, lamp light, film grain, candid moment.",
+      "Bold fitness poster: athlete running on a treadmill in a dark gym, electric blue accents, motion blur, clean empty space at the top for a membership headline.",
   },
 ]
 

@@ -43,7 +43,11 @@ export function KeyDialog({
     setBusy(true)
     setError(null)
     try {
-      await savePlatformCredentials({ api_key: apiKey })
+      const result = await savePlatformCredentials({ api_key: apiKey })
+      if (!result.ok) {
+        setError(result.error)
+        return
+      }
       setApiKey("")
       onChange(true)
       onOpenChange(false)
@@ -89,8 +93,8 @@ export function KeyDialog({
                 >
                   open.higgsfield.ai
                 </a>
-                . Paste it as-is. It is stored in an HTTP-only cookie in
-                this browser and used by the server for API requests.
+                . Paste it as-is. It is stored in an HTTP-only cookie in this
+                browser and used by the server for API requests.
               </p>
               <Input
                 autoFocus

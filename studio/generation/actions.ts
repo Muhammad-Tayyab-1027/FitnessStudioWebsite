@@ -12,18 +12,31 @@ import {
   encodeCredentials,
   parseCredentialInput,
 } from "./credentials"
+import { describeFailure } from "./errors"
+import type { ActionResult } from "./errors"
 import { createPlatformClient } from "./platform"
-import type { StatusResult } from "./platform"
+import type { QueuedGeneration, StatusResult } from "./platform"
+import { createSubmitGuard, submissionKey } from "./submit-guard"
 import { toPlatform } from "./to-platform"
 
-export async function savePlatformCredentials(data: unknown) {
-  const { apiKey } = parseCredentialInput(data)
+const guardSubmit = createSubmitGuard<QueuedGeneration>()
+
+export async function savePlatformCredentials(
+  data: unknown
+): Promise<ActionResult<object>> {
+  let apiKey: string
+  try {
+    apiKey = parseCredentialInput(data).apiKey
+  } catch (caught) {
+    return { ok: false, ...describeFailure(caught) }
+  }
   const jar = await cookies()
   jar.set(
     PLATFORM_KEY_COOKIE,
     encodeCredentials(apiKey),
     PLATFORM_KEY_COOKIE_OPTIONS
   )
+  return { ok: true }
 }
 
 export async function clearPlatformCredentials() {
@@ -38,14 +51,31 @@ export async function hasPlatformCredentials() {
   return (await readStoredCredentials()) !== null
 }
 
-export async function submitGeneration(plane: GenerationPlane) {
-  const model = getModel(plane.model)
-  const parsed: GenerationPlane = {
-    ...plane,
-    settings: parseSettings(model, plane.settings),
+export async function submitGeneration(
+  plane: GenerationPlane
+): Promise<ActionResult<{ queued: QueuedGeneration }>> {
+  try {
+    const model = getModel(plane.model)
+    const parsed: GenerationPlane = {
+      ...plane,
+      settings: parseSettings(model, plane.settings),
+    }
+    const { path, body } = toPlatform(parsed)
+    const credentials = await readCredentials()
+    const queued = await guardSubmit(
+      submissionKey(credentials.apiKey, path, body),
+      () => createPlatformClient(credentials).submit(path, body)
+    )
+    return { ok: true, queued }
+  } catch (caught) {
+    const failure = describeFailure(caught)
+    // The POST may have been queued before the connection dropped; resending
+    // it could start a second paid generation, so the user decides.
+    if (failure.code === "unreachable")
+      failure.error =
+        "Lost contact with Higgsfield while submitting. The generation may still have started; check your Higgsfield account before trying again."
+    return { ok: false, ...failure }
   }
-  const { path, body } = toPlatform(parsed)
-  return createPlatformClient(await readCredentials()).submit(path, body)
 }
 
 /** Every request in flight, answered in one round trip. Next dispatches server
@@ -56,24 +86,35 @@ export async function getGenerationStatuses(
   data: unknown
 ): Promise<StatusResult[]> {
   const requestIds = parseRequestIds(data)
-  const client = createPlatformClient(await readCredentials())
+  let client: ReturnType<typeof createPlatformClient>
+  try {
+    client = createPlatformClient(await readCredentials())
+  } catch (caught) {
+    const { error, retryable } = describeFailure(caught)
+    return requestIds.map((requestId) => ({ requestId, error, retryable }))
+  }
   return Promise.all(
     requestIds.map(async (requestId): Promise<StatusResult> => {
       try {
         return { requestId, status: await client.status(requestId) }
       } catch (caught) {
-        return {
-          requestId,
-          error: caught instanceof Error ? caught.message : String(caught),
-        }
+        const { error, retryable } = describeFailure(caught)
+        return { requestId, error, retryable }
       }
     })
   )
 }
 
-export async function cancelGeneration(data: unknown) {
-  const [requestId] = parseRequestIds(data)
-  await createPlatformClient(await readCredentials()).cancel(requestId!)
+export async function cancelGeneration(
+  data: unknown
+): Promise<ActionResult<object>> {
+  try {
+    const [requestId] = parseRequestIds(data)
+    await createPlatformClient(await readCredentials()).cancel(requestId!)
+    return { ok: true }
+  } catch (caught) {
+    return { ok: false, ...describeFailure(caught) }
+  }
 }
 
 async function readStoredCredentials() {

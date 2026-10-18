@@ -9,8 +9,7 @@ import { createPlatformClient, PlatformError } from "@/generation/platform"
 import { requireUploadContentType } from "@/generation/upload-contract"
 
 export async function POST(request: Request): Promise<NextResponse> {
-  const origin = request.headers.get("origin")
-  if (origin && origin !== new URL(request.url).origin)
+  if (!isSameOrigin(request))
     return failure(403, "Cross-origin upload requests are not allowed.")
 
   let contentType: string
@@ -69,6 +68,22 @@ export async function POST(request: Request): Promise<NextResponse> {
       502,
       "Could not prepare reference upload with Higgsfield. Try again."
     )
+  }
+}
+
+/* Compare the browser's Origin with the host it addressed. `request.url` names
+   the server's own bind address under `next start` (and the upstream behind a
+   proxy), which would reject every same-site upload on a real domain. */
+function isSameOrigin(request: Request): boolean {
+  const origin = request.headers.get("origin")
+  if (!origin) return true
+  const host =
+    request.headers.get("x-forwarded-host")?.split(",")[0]?.trim() ??
+    request.headers.get("host")
+  try {
+    return new URL(origin).host === (host ?? new URL(request.url).host)
+  } catch {
+    return false
   }
 }
 

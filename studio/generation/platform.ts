@@ -4,6 +4,9 @@ import type { UploadTicket } from "./upload-contract"
 
 const UPLOAD_PATH = "/files/generate-upload-url"
 const MODEL_ID = /^[a-z0-9][a-z0-9._/-]*$/i
+/** A request that has not answered by then is abandoned. A submit that times
+    out may still have been queued, so callers never resend it on their own. */
+const REQUEST_TIMEOUT_MS = 60_000
 
 export class PlatformError extends Error {
   readonly status: number
@@ -36,7 +39,7 @@ export type GenerationStatus = {
     carries its reason alone, so it cannot lose the answers standing beside it. */
 export type StatusResult =
   | { requestId: string; status: GenerationStatus }
-  | { requestId: string; error: string }
+  | { requestId: string; error: string; retryable?: boolean }
 
 export type PlatformClientOptions = {
   apiKey: string
@@ -67,6 +70,7 @@ export function createPlatformClient(options: PlatformClientOptions) {
         ...(body ? { "Content-Type": "application/json" } : {}),
       },
       ...(body ? { body: JSON.stringify(body) } : {}),
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     })
 
     const payload = await readJson(response)
@@ -179,5 +183,15 @@ async function readJson(response: Response): Promise<unknown> {
 function messageFromBody(status: number, body: unknown): string {
   const detail = asRecord(body).detail
   if (typeof detail === "string" && detail) return detail
+  // Validation errors may arrive as a list of { loc, msg } entries.
+  if (Array.isArray(detail)) {
+    const messages = detail.flatMap((item) => {
+      const entry = asRecord(item)
+      if (typeof entry.msg !== "string") return []
+      const field = Array.isArray(entry.loc) ? entry.loc.at(-1) : undefined
+      return [typeof field === "string" ? `${field}: ${entry.msg}` : entry.msg]
+    })
+    if (messages.length) return messages.join("; ")
+  }
   return `Platform request failed (${status})`
 }

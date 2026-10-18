@@ -62,11 +62,11 @@ import { useRuns } from "@/lib/studio/use-runs"
  * Explore / My Projects section, and the UserGenerations feed.
  */
 
-// PLACEHOLDER ASSETS — replaced by the app's real outputs as soon as there are three.
+// FitLife gym photography until the studio has three outputs of its own.
 const HERO_FALLBACKS = [
-  "/presets/placeholder-2.svg",
-  "/presets/placeholder-1.svg",
-  "/presets/placeholder-3.svg",
+  "/presets/gym-floor.jpg",
+  "/presets/trainer-coaching.jpg",
+  "/presets/class-studio.jpg",
 ] as const
 
 const HERO_GLOW =
@@ -139,7 +139,10 @@ function HomeState({
           className="flex w-full min-w-0 flex-col items-center gap-8"
         >
           <div className="flex flex-col items-center gap-5">
-            <HeroComposition images={images} alt="Recent Studio outputs" />
+            <HeroComposition
+              images={images}
+              alt="Recent FitLife AI Studio outputs"
+            />
             <h1 className="max-w-[640px] text-center text-q-accent-lg-bold uppercase">
               {title}
             </h1>
@@ -234,7 +237,7 @@ function FeedState({
                 ? "No generations yet"
                 : `No generations in ${title}`,
             description:
-              "Describe an idea below, then generate the first result.",
+              "Describe a promo, class teaser or poster below, then generate the first result.",
           }}
         />
       </div>
@@ -262,11 +265,14 @@ export interface StudioTemplateProps {
   title?: string
   /** Hero headline above the dock. */
   headline?: string
+  /** Link back to the product's main site, shown in the sidebar. */
+  siteLink?: { label: string; href: string }
 }
 
 export function StudioTemplate({
-  title = "Studio",
-  headline = "Turn any idea into images and video",
+  title = "FitLife AI Studio",
+  headline = "Create gym promos, class teasers and posters",
+  siteLink,
 }: StudioTemplateProps) {
   const [view, setView] = useState<StudioView>({ kind: "home" })
   const [collapsed, setCollapsed] = useState(false)
@@ -384,14 +390,16 @@ export function StudioTemplate({
     (model.requirePrompt && !prompt.trim())
 
   const handleGenerate = useCallback(() => {
-    if (!canGenerate || generating || !prepared.plane) return
+    if (!canGenerate || generating || runs.submitting || !prepared.plane) return
     setLocalError(null)
     if (!keyConfigured) {
       setKeyOpen(true)
       return
     }
     const projectId = view.kind === "project" ? view.projectId : undefined
-    void runs.submit(prepared.plane, projectId).then((record) => {
+    void runs.submit(prepared.plane, projectId).then(({ record, code }) => {
+      if (code === "missing_key") setKeyConfigured(false)
+      if (code === "missing_key" || code === "invalid_key") setKeyOpen(true)
       if (record && view.kind === "home") setView({ kind: "all" })
       if (record && projectId) projectsStore.touch(projectId)
     })
@@ -487,7 +495,7 @@ export function StudioTemplate({
     onCancel: handleCancel,
     generating,
     canceling,
-    generateDisabled: !canGenerate,
+    generateDisabled: !canGenerate || runs.submitting,
     disabledReason: prepared.error ?? undefined,
     error:
       localError ??
@@ -516,6 +524,7 @@ export function StudioTemplate({
         onCollapsedChange={setCollapsed}
         keyConfigured={keyConfigured}
         onOpenKey={() => setKeyOpen(true)}
+        siteLink={siteLink}
       />
       <main className="relative flex min-w-0 flex-1 flex-col">
         {view.kind === "home" ? (
