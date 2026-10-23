@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "galaxy-nails",
+    "name": "Galaxy Nails & Beauty",
+    "area": "Rialto, Dublin 8",
+    "headline": "Nails that are out of this world.",
+    "tagline": "Gel, acrylics, Russian manicures and spa pedicures on the South Circular Road, Rialto.",
+    "services_title": "Treatments",
+    "services": [
+      ["💅", "Gel & Acrylic Extensions", "Strong, long-lasting sets shaped to suit you, from natural to statement."],
+      ["✨", "Russian Manicure", "Precise cuticle work for a clean, polished finish that grows out beautifully."],
+      ["🦶", "Spa Pedicure", "Soak, scrub, massage and polish. A proper reset for tired feet."],
+      ["🤝", "Men's Manicure", "Tidy, natural nail care for men. Quick, clean and no fuss."]
+    ],
+    "about_title": "Your local nail studio in Rialto",
+    "about": [
+      "Galaxy Nails & Beauty is a neighbourhood salon at 564 South Circular Road, a short walk from St James's Hospital and the Rialto Luas stop.",
+      "Drop in or call ahead to book. We'll find a time that works for you."
+    ],
+    "badge_big": "564",
+    "badge_small": "South Circular Road",
+    "address": "564 South Circular Road, Rialto, Dublin 8, D08 TP48",
+    "phone": "+353 89 414 7228",
+    "email": "galaxynaild8@gmail.com",
+    "hours": "Call or message us for today's opening hours and availability.",
+    "cta_title": "Ready for fresh nails?",
+    "cta_text": "Call to book your next appointment.",
+    "book_label": "Call to book",
+    "font": "Playfair Display",
+    "bg": "#fbf7fb", "surface": "#ffffff", "ink": "#24132e", "muted": "#6e5b78",
+    "accent": "#7b3fa0", "accent_ink": "#ffffff", "line": "#ecdff1",
+    "hero_bg": "radial-gradient(900px 420px at 85% 10%, #ead6f5 0%, transparent 60%), radial-gradient(600px 300px at 10% 90%, #f9e3ee 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg, #7b3fa0, #c25c9a)"
+  },
+  {
+    "slug": "sapa-spa",
+    "name": "Sapa Spa & Beauty",
+    "area": "Rialto, Dublin 8",
+    "headline": "Slow down. You're in good hands.",
+    "tagline": "Nails, head spa, brows and lashes at 453 South Circular Road.",
+    "services_title": "Spa & beauty menu",
+    "services": [
+      ["💆", "Head Spa", "A deeply relaxing scalp cleanse and massage ritual."],
+      ["💅", "Builder Gel & Acrylics", "Durable, beautiful nails built to last."],
+      ["🦶", "Spa Pedicure", "Warm soak, exfoliation, massage and polish."],
+      ["👁️", "Brows & Lashes", "Shaping, tinting and lash treatments to frame your face."]
+    ],
+    "about_title": "A calm corner of Rialto",
+    "about": [
+      "Sapa Spa & Beauty Salon brings spa-style care to the South Circular Road, with nail care, head spa and brow and lash treatments under one roof.",
+      "Call us to book, or ask about the best treatment for you."
+    ],
+    "badge_big": "Head Spa",
+    "badge_small": "& beauty in Dublin 8",
+    "address": "453 South Circular Road, Rialto, Dublin 8, D08 E5F9",
+    "phone": "+353 1 402 1033",
+    "email": "sapasalon.dublin@gmail.com",
+    "hours": "Call us for opening hours and appointment availability.",
+    "cta_title": "Treat yourself this week",
+    "cta_text": "Book your head spa, nails or brows with one call.",
+    "book_label": "Call to book",
+    "font": "Cormorant Garamond",
+    "bg": "#f6f4ee", "surface": "#fffdf8", "ink": "#1f2a24", "muted": "#5d6b62",
+    "accent": "#2f5d4a", "accent_ink": "#f6f4ee", "line": "#e3e0d5",
+    "hero_bg": "radial-gradient(900px 420px at 80% 0%, #dfe9df 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #efe6d6 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg, #2f5d4a, #6f8f6b)"
+  },
+  {
+    "slug": "craft-co-barbershop",
+    "name": "Craft&Co Barbershop",
+    "area": "Thomas Street, Dublin 8",
+    "headline": "Sharp cuts. Good chat.",
+    "tagline": "A friendly barbershop at 88 Thomas Street in the heart of the Liberties.",
+    "services_title": "In the chair",
+    "services": [
+      ["✂️", "Haircuts", "Classic and modern men's cuts, done properly."],
+      ["💈", "Skin Fades", "Clean, seamless fades from the sharpest skin finish up."],
+      ["🧔", "Beard Trims", "Shape, line-up and tidy for a well-kept beard."],
+      ["👦", "Kids' Cuts", "Patient, friendly cuts for the younger lads."]
+    ],
+    "about_title": "The Liberties' local barber",
+    "about": [
+      "Craft&Co is a barbershop where you can sit back, relax and chat away at ease with the team while you get a great cut.",
+      "Call or text to book your spot."
+    ],
+    "badge_big": "88",
+    "badge_small": "Thomas Street",
+    "address": "88 Thomas Street, Dublin 8",
+    "phone": "+353 83 139 8859",
+    "email": "craftcobarbershopdublin@gmail.com",
+    "hours": "Call or text 083 139 8859 to check today's hours and book a time.",
+    "cta_title": "Due a fresh cut?",
+    "cta_text": "Call or text and we'll get you in.",
+    "book_label": "Call or text",
+    "font": "Oswald",
+    "bg": "#111111", "surface": "#1b1b1b", "ink": "#f2efe9", "muted": "#a7a29a",
+    "accent": "#c9a227", "accent_ink": "#111111", "line": "#2c2c2c",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #2b2414 0%, transparent 60%), linear-gradient(180deg, #151515, #111111)",
+    "badge_bg": "linear-gradient(135deg, #c9a227, #8a6d12)"
+  },
+  {
+    "slug": "new-look-barber",
+    "name": "New Look Barber Shop",
+    "area": "Cork Street, Dublin 8",
+    "headline": "Your new look starts here.",
+    "tagline": "Men's haircuts, fades and beard trims at 79 Cork Street, Dublin 8.",
+    "services_title": "Services",
+    "services": [
+      ["✂️", "Men's Haircut", "Cut and styled the way you like it."],
+      ["💈", "Fades", "Low, mid or high, blended clean."],
+      ["🧔", "Beard Trim & Line-up", "Sharp edges and a tidy shape."],
+      ["👦", "Children's Cuts", "Quick, friendly cuts for kids."]
+    ],
+    "about_title": "Cork Street's neighbourhood barber",
+    "about": [
+      "New Look Barber Shop has been looking after the Liberties and Ushers area from 79 Cork Street.",
+      "Walk in or call ahead to book your cut."
+    ],
+    "badge_big": "79",
+    "badge_small": "Cork Street, D08",
+    "address": "79 Cork Street, Ushers, Dublin 8, D08 NF8N",
+    "phone": "+353 1 444 8236",
+    "email": "imran768311@gmail.com",
+    "hours": "Monday 9:00 to 18:30 · Sunday 10:30 to 16:30 · Call for other days.",
+    "cta_title": "Book your next cut",
+    "cta_text": "Call the shop and we'll fit you in.",
+    "book_label": "Call to book",
+    "font": "Bebas Neue",
+    "bg": "#f4f6f9", "surface": "#ffffff", "ink": "#0f1b2d", "muted": "#566378",
+    "accent": "#c8102e", "accent_ink": "#ffffff", "line": "#dfe4ec",
+    "hero_bg": "radial-gradient(900px 420px at 90% 0%, #dbe5f3 0%, transparent 60%), radial-gradient(500px 260px at 0% 100%, #f7dbe0 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg, #0f1b2d, #24406b)"
+  },
+  {
+    "slug": "beauty-nail-care-salon",
+    "name": "Beauty & Nail Care Salon",
+    "area": "Wicklow Street, Dublin 2",
+    "headline": "City-centre nails & beauty since 1998.",
+    "tagline": "Manicures, pedicures and beauty treatments on Wicklow Street, just off Grafton Street.",
+    "services_title": "Treatments",
+    "services": [
+      ["💅", "Manicures", "Classic, gel and nail art, finished with care."],
+      ["🦶", "Pedicures", "Relaxing pedicures to keep feet looking their best."],
+      ["✨", "Nail Extensions", "Gel and acrylic sets shaped to suit you."],
+      ["🌸", "Beauty Treatments", "Ask us about waxing, brows and more."]
+    ],
+    "about_title": "A Dublin city-centre favourite",
+    "about": [
+      "Beauty & Nail Care Salon has been looking after Dubliners in the city centre since 1998.",
+      "Pop in while you're in town, or call ahead to book."
+    ],
+    "badge_big": "1998",
+    "badge_small": "in the city centre",
+    "address": "12 Wicklow Street, Dublin 2",
+    "phone": "Call the salon",
+    "email": "beautyandnailcaredublin@gmail.com",
+    "hours": "Call or email us for opening hours and availability.",
+    "cta_title": "In town this week?",
+    "cta_text": "Get in touch to book your nails or beauty treatment.",
+    "book_label": "Email to book",
+    "font": "DM Serif Display",
+    "bg": "#fff8f5", "surface": "#ffffff", "ink": "#2b1a16", "muted": "#7a625b",
+    "accent": "#c4574a", "accent_ink": "#ffffff", "line": "#f1e1da",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #fbe1d8 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #fdeee2 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg, #c4574a, #e39a7c)"
+  }
+]
