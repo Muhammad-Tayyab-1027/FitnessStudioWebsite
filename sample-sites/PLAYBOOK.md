@@ -9,6 +9,22 @@ The source of truth is Gmail labels in vibecoders.ie@gmail.com: `Outreach/Contac
 
 After sending, check `from:mailer-daemon newer_than:1d` for bounces and label them `Outreach/Bounced`.
 
+## 0. Legal rules (Ireland). These override everything below.
+- **Cold outreach is PAUSED until Muhammad says to resume.** Until then, only handle replies.
+- Under S.I. 336/2011 (Reg. 13), cold marketing email to an individual (a sole trader, or a personal
+  Gmail/Hotmail/Yahoo address belonging to a person) needs their prior consent. Cold email is only allowed to a
+  company (a "Ltd"/DAC/CLG registered with the CRO) at a business address. So, when outreach resumes:
+  - Email a business only after confirming it is a registered company (search "<name> CRO" / solocheck.ie / vision-net.ie).
+  - Prefer role addresses (info@, bookings@, salon@...). Skip any address that looks like a person's name.
+  - Sole traders: don't email them. List them in the run summary so Muhammad can call or visit in person instead.
+- Every email must say who is sending, give a working reply address, and include a free one-click-style opt-out
+  ("reply 'no thanks'"). Honour an opt-out the same day: label `Outreach/Do not contact` and never email again.
+- GDPR: only store the business name, area and listed contact email. If anyone asks for their data to be deleted,
+  remove their sample site and notes and confirm by reply. Delete notes for non-responders after 60 days.
+- Sample sites must keep the "Unofficial design preview… not affiliated" banner and `noindex`. If a business asks,
+  delete its sample site the same day.
+- Never copy a business's logo or photos into a sample site without permission. Never claim to be affiliated.
+
 ## 1. Handle replies first
 - Search Gmail for replies to our outreach threads (subject starts "A free website preview for"),
   and for any new inbound email from a business in `contacted`.

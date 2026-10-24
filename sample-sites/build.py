@@ -14,6 +14,7 @@ TEMPLATE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>{name} | {area}</title>
 <meta name="description" content="{tagline}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +76,7 @@ footer .wrap {{ display: flex; justify-content: space-between; gap: 16px; flex-w
 </style>
 </head>
 <body>
+<div style="background:#111;color:#fff;font:13px/1.4 Inter,system-ui,sans-serif;text-align:center;padding:8px 16px">Unofficial design preview made by Muhammad Tayyab. Not the official website of {name} and not affiliated with it.</div>
 <header>
   <div class="wrap">
     <a class="brand" href="#">{name}</a>
@@ -141,7 +143,7 @@ footer .wrap {{ display: flex; justify-content: space-between; gap: 16px; flex-w
 <footer>
   <div class="wrap">
     <span>&copy; {name}, {area}</span>
-    <span>Sample website concept, not yet live.</span>
+    <span>Unofficial concept by Muhammad Tayyab (vibecoders.ie@gmail.com). Removed on request.</span>
   </div>
 </footer>
 </body>
