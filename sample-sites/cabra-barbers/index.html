@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cabra Barbers | Cabra, Dublin 7</title>
+<meta name="description" content="Haircuts, hot towel shaves and beard trims on Dowth Avenue, Cabra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #121212; --surface: #1c1c1c; --ink: #f1efe9; --muted: #a9a49b;
+  --accent: #2bb3a3; --accent-ink: #121212; --line: #2d2d2d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3, .brand { font-family: "Oswald", Georgia, serif; font-weight: 600; line-height: 1.15; }
+header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.brand { font-size: 1.35rem; text-decoration: none; }
+nav a { text-decoration: none; color: var(--muted); margin-left: 22px; font-size: .95rem; }
+nav a:hover { color: var(--ink); }
+.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+  padding: 13px 26px; border-radius: 999px; font-weight: 600; transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.hero { padding: 96px 0 88px; background: radial-gradient(900px 420px at 85% 0%, #133a36 0%, transparent 60%), linear-gradient(180deg,#171717,#121212); }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--accent); font-weight: 600; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); margin: 14px 0 18px; max-width: 14ch; }
+.hero p { color: var(--muted); font-size: 1.15rem; max-width: 46ch; margin-bottom: 32px; }
+.hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 80px 0; }
+section h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 10px 0 36px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.card .icon { font-size: 1.6rem; margin-bottom: 14px; }
+.card h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.card p { color: var(--muted); font-size: .95rem; }
+.about { background: var(--surface); border-block: 1px solid var(--line); }
+.about .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.about p { color: var(--muted); margin-bottom: 14px; }
+.badge { aspect-ratio: 1; border-radius: 28px; background: linear-gradient(135deg,#2bb3a3,#16756b); display: grid; place-items: center;
+  color: var(--accent-ink); text-align: center; padding: 30px; }
+.badge strong { font-family: "Oswald", serif; font-size: clamp(2.2rem, 5vw, 3.4rem); display: block; line-height: 1.05; }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.visit dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 24px; }
+.visit dt { color: var(--muted); }
+.cta { text-align: center; background: var(--accent); color: var(--accent-ink); border-radius: 28px; padding: 64px 24px; margin: 0 20px 80px; }
+.cta h2 { margin: 0 0 12px; }
+.cta p { opacity: .85; margin-bottom: 28px; }
+.cta .btn { background: var(--accent-ink); color: var(--accent); }
+footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: .85rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  nav { display: none; }
+  .about .wrap, .visit .wrap { grid-template-columns: 1fr; }
+  .hero { padding: 64px 0; }
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">Cabra Barbers</a>
+    <nav><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+    <a class="btn" href="tel:+353858113457">Call to book</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Cabra, Dublin 7</div>
+    <h1>Cabra&#x27;s local barber.</h1>
+    <p>Haircuts, hot towel shaves and beard trims on Dowth Avenue, Cabra.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+353858113457">Call to book</a>
+      <a class="btn ghost" href="#services">See services</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What we do</div>
+    <h2>In the chair</h2>
+    <div class="grid"><div class="card"><div class="icon">✂️</div><h3>Men&#x27;s Haircuts</h3><p>Classic and modern cuts, done right.</p></div><div class="card"><div class="icon">🔥</div><h3>Hot Towel Shave</h3><p>A relaxing, traditional close shave.</p></div><div class="card"><div class="icon">🧔</div><h3>Beard Trims</h3><p>Shaped and lined up to suit you.</p></div><div class="card"><div class="icon">🪒</div><h3>Head Shave</h3><p>Smooth, clean head shaves.</p></div></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">About us</div>
+      <h2>Looking after Cabra</h2>
+      <p>Cabra Barbers is a neighbourhood barbershop on Dowth Avenue in Cabra, Dublin 7.</p><p>Walk in or call ahead to book your cut.</p>
+    </div>
+    <div class="badge"><div><strong>D7</strong>Dowth Avenue, Cabra</div></div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Visit</div>
+      <h2>Find us</h2>
+      <dl>
+        <dt>Address</dt><dd>Dowth Avenue, Cabra, Dublin 7</dd>
+        <dt>Phone</dt><dd><a href="tel:+353858113457">+353 85 811 3457</a></dd>
+        <dt>Email</dt><dd><a href="mailto:cabrabarbers@gmail.com">cabrabarbers@gmail.com</a></dd>
+      </dl>
+    </div>
+    <div class="card">
+      <h3>Opening hours</h3>
+      <p>Call us for today&#x27;s opening hours.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Due a fresh cut?</h2>
+  <p>Call and we&#x27;ll get you in.</p>
+  <a class="btn" href="tel:+353858113457">Call to book</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; Cabra Barbers, Cabra, Dublin 7</span>
+    <span>Sample website concept, not yet live.</span>
+  </div>
+</footer>
+</body>
+</html>

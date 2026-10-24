@@ -7,10 +7,26 @@
     "tagline": "Gel, acrylics, Russian manicures and spa pedicures on the South Circular Road, Rialto.",
     "services_title": "Treatments",
     "services": [
-      ["💅", "Gel & Acrylic Extensions", "Strong, long-lasting sets shaped to suit you, from natural to statement."],
-      ["✨", "Russian Manicure", "Precise cuticle work for a clean, polished finish that grows out beautifully."],
-      ["🦶", "Spa Pedicure", "Soak, scrub, massage and polish. A proper reset for tired feet."],
-      ["🤝", "Men's Manicure", "Tidy, natural nail care for men. Quick, clean and no fuss."]
+      [
+        "💅",
+        "Gel & Acrylic Extensions",
+        "Strong, long-lasting sets shaped to suit you, from natural to statement."
+      ],
+      [
+        "✨",
+        "Russian Manicure",
+        "Precise cuticle work for a clean, polished finish that grows out beautifully."
+      ],
+      [
+        "🦶",
+        "Spa Pedicure",
+        "Soak, scrub, massage and polish. A proper reset for tired feet."
+      ],
+      [
+        "🤝",
+        "Men's Manicure",
+        "Tidy, natural nail care for men. Quick, clean and no fuss."
+      ]
     ],
     "about_title": "Your local nail studio in Rialto",
     "about": [
@@ -27,8 +43,13 @@
     "cta_text": "Call to book your next appointment.",
     "book_label": "Call to book",
     "font": "Playfair Display",
-    "bg": "#fbf7fb", "surface": "#ffffff", "ink": "#24132e", "muted": "#6e5b78",
-    "accent": "#7b3fa0", "accent_ink": "#ffffff", "line": "#ecdff1",
+    "bg": "#fbf7fb",
+    "surface": "#ffffff",
+    "ink": "#24132e",
+    "muted": "#6e5b78",
+    "accent": "#7b3fa0",
+    "accent_ink": "#ffffff",
+    "line": "#ecdff1",
     "hero_bg": "radial-gradient(900px 420px at 85% 10%, #ead6f5 0%, transparent 60%), radial-gradient(600px 300px at 10% 90%, #f9e3ee 0%, transparent 60%)",
     "badge_bg": "linear-gradient(135deg, #7b3fa0, #c25c9a)"
   },
@@ -40,10 +61,26 @@
     "tagline": "Nails, head spa, brows and lashes at 453 South Circular Road.",
     "services_title": "Spa & beauty menu",
     "services": [
-      ["💆", "Head Spa", "A deeply relaxing scalp cleanse and massage ritual."],
-      ["💅", "Builder Gel & Acrylics", "Durable, beautiful nails built to last."],
-      ["🦶", "Spa Pedicure", "Warm soak, exfoliation, massage and polish."],
-      ["👁️", "Brows & Lashes", "Shaping, tinting and lash treatments to frame your face."]
+      [
+        "💆",
+        "Head Spa",
+        "A deeply relaxing scalp cleanse and massage ritual."
+      ],
+      [
+        "💅",
+        "Builder Gel & Acrylics",
+        "Durable, beautiful nails built to last."
+      ],
+      [
+        "🦶",
+        "Spa Pedicure",
+        "Warm soak, exfoliation, massage and polish."
+      ],
+      [
+        "👁️",
+        "Brows & Lashes",
+        "Shaping, tinting and lash treatments to frame your face."
+      ]
     ],
     "about_title": "A calm corner of Rialto",
     "about": [
@@ -60,8 +97,13 @@
     "cta_text": "Book your head spa, nails or brows with one call.",
     "book_label": "Call to book",
     "font": "Cormorant Garamond",
-    "bg": "#f6f4ee", "surface": "#fffdf8", "ink": "#1f2a24", "muted": "#5d6b62",
-    "accent": "#2f5d4a", "accent_ink": "#f6f4ee", "line": "#e3e0d5",
+    "bg": "#f6f4ee",
+    "surface": "#fffdf8",
+    "ink": "#1f2a24",
+    "muted": "#5d6b62",
+    "accent": "#2f5d4a",
+    "accent_ink": "#f6f4ee",
+    "line": "#e3e0d5",
     "hero_bg": "radial-gradient(900px 420px at 80% 0%, #dfe9df 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #efe6d6 0%, transparent 60%)",
     "badge_bg": "linear-gradient(135deg, #2f5d4a, #6f8f6b)"
   },
@@ -73,10 +115,26 @@
     "tagline": "A friendly barbershop at 88 Thomas Street in the heart of the Liberties.",
     "services_title": "In the chair",
     "services": [
-      ["✂️", "Haircuts", "Classic and modern men's cuts, done properly."],
-      ["💈", "Skin Fades", "Clean, seamless fades from the sharpest skin finish up."],
-      ["🧔", "Beard Trims", "Shape, line-up and tidy for a well-kept beard."],
-      ["👦", "Kids' Cuts", "Patient, friendly cuts for the younger lads."]
+      [
+        "✂️",
+        "Haircuts",
+        "Classic and modern men's cuts, done properly."
+      ],
+      [
+        "💈",
+        "Skin Fades",
+        "Clean, seamless fades from the sharpest skin finish up."
+      ],
+      [
+        "🧔",
+        "Beard Trims",
+        "Shape, line-up and tidy for a well-kept beard."
+      ],
+      [
+        "👦",
+        "Kids' Cuts",
+        "Patient, friendly cuts for the younger lads."
+      ]
     ],
     "about_title": "The Liberties' local barber",
     "about": [
@@ -93,8 +151,13 @@
     "cta_text": "Call or text and we'll get you in.",
     "book_label": "Call or text",
     "font": "Oswald",
-    "bg": "#111111", "surface": "#1b1b1b", "ink": "#f2efe9", "muted": "#a7a29a",
-    "accent": "#c9a227", "accent_ink": "#111111", "line": "#2c2c2c",
+    "bg": "#111111",
+    "surface": "#1b1b1b",
+    "ink": "#f2efe9",
+    "muted": "#a7a29a",
+    "accent": "#c9a227",
+    "accent_ink": "#111111",
+    "line": "#2c2c2c",
     "hero_bg": "radial-gradient(900px 420px at 85% 0%, #2b2414 0%, transparent 60%), linear-gradient(180deg, #151515, #111111)",
     "badge_bg": "linear-gradient(135deg, #c9a227, #8a6d12)"
   },
@@ -106,10 +169,26 @@
     "tagline": "Men's haircuts, fades and beard trims at 79 Cork Street, Dublin 8.",
     "services_title": "Services",
     "services": [
-      ["✂️", "Men's Haircut", "Cut and styled the way you like it."],
-      ["💈", "Fades", "Low, mid or high, blended clean."],
-      ["🧔", "Beard Trim & Line-up", "Sharp edges and a tidy shape."],
-      ["👦", "Children's Cuts", "Quick, friendly cuts for kids."]
+      [
+        "✂️",
+        "Men's Haircut",
+        "Cut and styled the way you like it."
+      ],
+      [
+        "💈",
+        "Fades",
+        "Low, mid or high, blended clean."
+      ],
+      [
+        "🧔",
+        "Beard Trim & Line-up",
+        "Sharp edges and a tidy shape."
+      ],
+      [
+        "👦",
+        "Children's Cuts",
+        "Quick, friendly cuts for kids."
+      ]
     ],
     "about_title": "Cork Street's neighbourhood barber",
     "about": [
@@ -126,8 +205,13 @@
     "cta_text": "Call the shop and we'll fit you in.",
     "book_label": "Call to book",
     "font": "Bebas Neue",
-    "bg": "#f4f6f9", "surface": "#ffffff", "ink": "#0f1b2d", "muted": "#566378",
-    "accent": "#c8102e", "accent_ink": "#ffffff", "line": "#dfe4ec",
+    "bg": "#f4f6f9",
+    "surface": "#ffffff",
+    "ink": "#0f1b2d",
+    "muted": "#566378",
+    "accent": "#c8102e",
+    "accent_ink": "#ffffff",
+    "line": "#dfe4ec",
     "hero_bg": "radial-gradient(900px 420px at 90% 0%, #dbe5f3 0%, transparent 60%), radial-gradient(500px 260px at 0% 100%, #f7dbe0 0%, transparent 60%)",
     "badge_bg": "linear-gradient(135deg, #0f1b2d, #24406b)"
   },
@@ -139,10 +223,26 @@
     "tagline": "Manicures, pedicures and beauty treatments on Wicklow Street, just off Grafton Street.",
     "services_title": "Treatments",
     "services": [
-      ["💅", "Manicures", "Classic, gel and nail art, finished with care."],
-      ["🦶", "Pedicures", "Relaxing pedicures to keep feet looking their best."],
-      ["✨", "Nail Extensions", "Gel and acrylic sets shaped to suit you."],
-      ["🌸", "Beauty Treatments", "Ask us about waxing, brows and more."]
+      [
+        "💅",
+        "Manicures",
+        "Classic, gel and nail art, finished with care."
+      ],
+      [
+        "🦶",
+        "Pedicures",
+        "Relaxing pedicures to keep feet looking their best."
+      ],
+      [
+        "✨",
+        "Nail Extensions",
+        "Gel and acrylic sets shaped to suit you."
+      ],
+      [
+        "🌸",
+        "Beauty Treatments",
+        "Ask us about waxing, brows and more."
+      ]
     ],
     "about_title": "A Dublin city-centre favourite",
     "about": [
@@ -159,9 +259,284 @@
     "cta_text": "Get in touch to book your nails or beauty treatment.",
     "book_label": "Email to book",
     "font": "DM Serif Display",
-    "bg": "#fff8f5", "surface": "#ffffff", "ink": "#2b1a16", "muted": "#7a625b",
-    "accent": "#c4574a", "accent_ink": "#ffffff", "line": "#f1e1da",
+    "bg": "#fff8f5",
+    "surface": "#ffffff",
+    "ink": "#2b1a16",
+    "muted": "#7a625b",
+    "accent": "#c4574a",
+    "accent_ink": "#ffffff",
+    "line": "#f1e1da",
     "hero_bg": "radial-gradient(900px 420px at 85% 0%, #fbe1d8 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #fdeee2 0%, transparent 60%)",
     "badge_bg": "linear-gradient(135deg, #c4574a, #e39a7c)"
+  },
+  {
+    "slug": "navan-barber",
+    "name": "Navan Barbers",
+    "area": "Phibsborough, Dublin 7",
+    "headline": "Fresh cuts on the North Circular.",
+    "tagline": "A friendly barbershop at 346 North Circular Road, Phibsborough, taking care of all your grooming needs.",
+    "services_title": "In the chair",
+    "services": [
+      [
+        "✂️",
+        "Haircuts",
+        "Classic and modern men's cuts, styled the way you like."
+      ],
+      [
+        "💈",
+        "Skin Fades",
+        "Sharp, seamless fades every time."
+      ],
+      [
+        "🧔",
+        "Beard Trims & Shaping",
+        "Lined up clean and shaped to suit your face."
+      ],
+      [
+        "🔥",
+        "Hot Towel Shave",
+        "A proper traditional shave to finish the job."
+      ]
+    ],
+    "about_title": "Your local barber in Phibsborough",
+    "about": [
+      "Navan Barbers is a Kurdish-owned barbershop on the North Circular Road in Phibsborough, looking after all your grooming needs.",
+      "Walk in or call ahead and we'll fit you in."
+    ],
+    "badge_big": "346",
+    "badge_small": "North Circular Road",
+    "address": "346 North Circular Road, Phibsborough, Dublin 7",
+    "phone": "+353 89 454 4444",
+    "email": "NavanBarbers@outlook.ie",
+    "hours": "Call us for today's opening hours.",
+    "cta_title": "Due a fresh cut?",
+    "cta_text": "Call the shop and we'll get you in.",
+    "book_label": "Call to book",
+    "font": "Oswald",
+    "accent": "#e0533d",
+    "accent_ink": "#121212",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #3a1a14 0%, transparent 60%), linear-gradient(180deg,#171717,#121212)",
+    "badge_bg": "linear-gradient(135deg,#e0533d,#9b2c1d)",
+    "bg": "#121212",
+    "surface": "#1c1c1c",
+    "ink": "#f1efe9",
+    "muted": "#a9a49b",
+    "line": "#2d2d2d"
+  },
+  {
+    "slug": "nail-garden",
+    "name": "Nail Garden Beauty Salon",
+    "area": "Phibsborough, Dublin 7",
+    "headline": "Beautiful nails, right in Phibsborough.",
+    "tagline": "Gel, polish, lash extensions, waxing and facials at Phibsborough Shopping Centre.",
+    "services_title": "Treatments",
+    "services": [
+      [
+        "💅",
+        "Gel & Polish",
+        "Long-lasting gel and classic polish in every colour."
+      ],
+      [
+        "👁️",
+        "Eyelash Extensions",
+        "Natural to full-volume lashes, applied with care."
+      ],
+      [
+        "🌿",
+        "Waxing",
+        "Quick, gentle waxing for smooth results."
+      ],
+      [
+        "✨",
+        "Facials",
+        "Relaxing facials to refresh and restore your skin."
+      ]
+    ],
+    "about_title": "A friendly nail bar in Phibsborough",
+    "about": [
+      "Nail Garden Beauty Salon is at Phibsborough Shopping Centre, with a 4.6-star rating from more than 270 Treatwell reviews.",
+      "Pop in while you're shopping, or call ahead to book."
+    ],
+    "badge_big": "4.6★",
+    "badge_small": "from 270+ reviews",
+    "address": "Unit 3, Phibsborough Shopping Centre, Dublin 7",
+    "phone": "+353 1 882 8589",
+    "email": "liangliang2891@hotmail.com",
+    "hours": "Call us for opening hours and availability.",
+    "cta_title": "Time for fresh nails?",
+    "cta_text": "Call to book your next appointment.",
+    "book_label": "Call to book",
+    "font": "Playfair Display",
+    "bg": "#f6faf6",
+    "surface": "#ffffff",
+    "ink": "#1b2a1f",
+    "muted": "#5c6e61",
+    "accent": "#3f8f5b",
+    "accent_ink": "#ffffff",
+    "line": "#dfeadf",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #d8eedd 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #f6e3ea 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg,#3f8f5b,#8cc79a)"
+  },
+  {
+    "slug": "d15-barbers-drumcondra",
+    "name": "D15 Barbers Drumcondra",
+    "area": "Drumcondra, Dublin 9",
+    "headline": "Sharp cuts in Drumcondra.",
+    "tagline": "Men's haircuts, fades and beard work at 30 Lower Drumcondra Road.",
+    "services_title": "Services",
+    "services": [
+      [
+        "✂️",
+        "Men's Haircuts",
+        "Clean, modern cuts for every style."
+      ],
+      [
+        "💈",
+        "Fades",
+        "Low, mid, high or skin, blended clean."
+      ],
+      [
+        "🧔",
+        "Beard Trims",
+        "Shaped, lined up and finished properly."
+      ],
+      [
+        "👦",
+        "Kids' Cuts",
+        "Friendly, patient cuts for the younger lads."
+      ]
+    ],
+    "about_title": "Drumcondra's local barber",
+    "about": [
+      "D15 Barbers is on Lower Drumcondra Road, a short walk from Croke Park and the city centre.",
+      "Book online or give us a call."
+    ],
+    "badge_big": "30",
+    "badge_small": "Lower Drumcondra Road",
+    "address": "30 Lower Drumcondra Road, Dublin 9",
+    "phone": "+353 87 417 2207",
+    "email": "d9barbers@gmail.com",
+    "hours": "Call us for today's hours. Closed Sundays.",
+    "cta_title": "Book your next cut",
+    "cta_text": "Call and we'll find you a time.",
+    "book_label": "Call to book",
+    "font": "Bebas Neue",
+    "bg": "#f3f5f8",
+    "surface": "#ffffff",
+    "ink": "#0e1726",
+    "muted": "#55617a",
+    "accent": "#1f6feb",
+    "accent_ink": "#ffffff",
+    "line": "#dde3ec",
+    "hero_bg": "radial-gradient(900px 420px at 90% 0%, #d6e4fb 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg,#0e1726,#1f6feb)"
+  },
+  {
+    "slug": "monika-nails",
+    "name": "Monika Nails",
+    "area": "Drumcondra, Dublin 9",
+    "headline": "Gorgeous nails on Drumcondra Road.",
+    "tagline": "Acrylics, gel and manicures at 88 Upper Drumcondra Road.",
+    "services_title": "Treatments",
+    "services": [
+      [
+        "💎",
+        "Acrylic Nails",
+        "Strong, beautifully shaped acrylic sets."
+      ],
+      [
+        "💅",
+        "Gel Nails",
+        "Glossy, chip-resistant gel colour that lasts."
+      ],
+      [
+        "✨",
+        "Manicures",
+        "Neat, polished hands from start to finish."
+      ],
+      [
+        "🎨",
+        "Nail Art",
+        "Designs to match your style or occasion."
+      ]
+    ],
+    "about_title": "Your Drumcondra nail technician",
+    "about": [
+      "Monika Nails is a nail studio at 88 Upper Drumcondra Road, loved locally for its acrylic work.",
+      "Call to book your appointment."
+    ],
+    "badge_big": "88",
+    "badge_small": "Upper Drumcondra Road",
+    "address": "88 Upper Drumcondra Road, Drumcondra, Dublin 9",
+    "phone": "+353 87 398 1994",
+    "email": "kovacsmonica@yahoo.com",
+    "hours": "Call us for opening hours and availability.",
+    "cta_title": "Ready for new nails?",
+    "cta_text": "Call to book your next set.",
+    "book_label": "Call to book",
+    "font": "DM Serif Display",
+    "bg": "#fdf6f8",
+    "surface": "#ffffff",
+    "ink": "#2d1520",
+    "muted": "#7a5b68",
+    "accent": "#c2185b",
+    "accent_ink": "#ffffff",
+    "line": "#f2dfe6",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #fbd9e6 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #fde9df 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg,#c2185b,#ef6f9a)"
+  },
+  {
+    "slug": "cabra-barbers",
+    "name": "Cabra Barbers",
+    "area": "Cabra, Dublin 7",
+    "headline": "Cabra's local barber.",
+    "tagline": "Haircuts, hot towel shaves and beard trims on Dowth Avenue, Cabra.",
+    "services_title": "In the chair",
+    "services": [
+      [
+        "✂️",
+        "Men's Haircuts",
+        "Classic and modern cuts, done right."
+      ],
+      [
+        "🔥",
+        "Hot Towel Shave",
+        "A relaxing, traditional close shave."
+      ],
+      [
+        "🧔",
+        "Beard Trims",
+        "Shaped and lined up to suit you."
+      ],
+      [
+        "🪒",
+        "Head Shave",
+        "Smooth, clean head shaves."
+      ]
+    ],
+    "about_title": "Looking after Cabra",
+    "about": [
+      "Cabra Barbers is a neighbourhood barbershop on Dowth Avenue in Cabra, Dublin 7.",
+      "Walk in or call ahead to book your cut."
+    ],
+    "badge_big": "D7",
+    "badge_small": "Dowth Avenue, Cabra",
+    "address": "Dowth Avenue, Cabra, Dublin 7",
+    "phone": "+353 85 811 3457",
+    "email": "cabrabarbers@gmail.com",
+    "hours": "Call us for today's opening hours.",
+    "cta_title": "Due a fresh cut?",
+    "cta_text": "Call and we'll get you in.",
+    "book_label": "Call to book",
+    "font": "Oswald",
+    "accent": "#2bb3a3",
+    "accent_ink": "#121212",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #133a36 0%, transparent 60%), linear-gradient(180deg,#171717,#121212)",
+    "badge_bg": "linear-gradient(135deg,#2bb3a3,#16756b)",
+    "bg": "#121212",
+    "surface": "#1c1c1c",
+    "ink": "#f1efe9",
+    "muted": "#a9a49b",
+    "line": "#2d2d2d"
   }
 ]
