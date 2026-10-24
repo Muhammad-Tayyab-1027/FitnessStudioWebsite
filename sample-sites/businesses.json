@@ -216,60 +216,6 @@
     "badge_bg": "linear-gradient(135deg, #0f1b2d, #24406b)"
   },
   {
-    "slug": "beauty-nail-care-salon",
-    "name": "Beauty & Nail Care Salon",
-    "area": "Wicklow Street, Dublin 2",
-    "headline": "City-centre nails & beauty since 1998.",
-    "tagline": "Manicures, pedicures and beauty treatments on Wicklow Street, just off Grafton Street.",
-    "services_title": "Treatments",
-    "services": [
-      [
-        "💅",
-        "Manicures",
-        "Classic, gel and nail art, finished with care."
-      ],
-      [
-        "🦶",
-        "Pedicures",
-        "Relaxing pedicures to keep feet looking their best."
-      ],
-      [
-        "✨",
-        "Nail Extensions",
-        "Gel and acrylic sets shaped to suit you."
-      ],
-      [
-        "🌸",
-        "Beauty Treatments",
-        "Ask us about waxing, brows and more."
-      ]
-    ],
-    "about_title": "A Dublin city-centre favourite",
-    "about": [
-      "Beauty & Nail Care Salon has been looking after Dubliners in the city centre since 1998.",
-      "Pop in while you're in town, or call ahead to book."
-    ],
-    "badge_big": "1998",
-    "badge_small": "in the city centre",
-    "address": "12 Wicklow Street, Dublin 2",
-    "phone": "Call the salon",
-    "email": "beautyandnailcaredublin@gmail.com",
-    "hours": "Call or email us for opening hours and availability.",
-    "cta_title": "In town this week?",
-    "cta_text": "Get in touch to book your nails or beauty treatment.",
-    "book_label": "Email to book",
-    "font": "DM Serif Display",
-    "bg": "#fff8f5",
-    "surface": "#ffffff",
-    "ink": "#2b1a16",
-    "muted": "#7a625b",
-    "accent": "#c4574a",
-    "accent_ink": "#ffffff",
-    "line": "#f1e1da",
-    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #fbe1d8 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #fdeee2 0%, transparent 60%)",
-    "badge_bg": "linear-gradient(135deg, #c4574a, #e39a7c)"
-  },
-  {
     "slug": "navan-barber",
     "name": "Navan Barbers",
     "area": "Phibsborough, Dublin 7",

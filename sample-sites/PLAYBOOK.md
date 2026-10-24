@@ -3,7 +3,11 @@
 Muhammad Tayyab is a student web developer in Dublin. He sells websites to local businesses
 that don't have one. Outreach and replies go out from the connected Gmail account, vibecoders.ie@gmail.com.
 
-State lives in `sample-sites/leads.json`. It is git-ignored and must never be committed: it lists business contact details and the repo is public. Read it first and update it at the end of every run.
+The source of truth is Gmail labels in vibecoders.ie@gmail.com: `Outreach/Contacted`, `Outreach/Interested`, `Outreach/Bounced` and `Outreach/Do not contact`. Before emailing anyone, search Gmail for that address (`to:<email> OR from:<email>`) and skip it if any thread exists. Label every outreach thread `Outreach/Contacted` as soon as it is sent, and move bounces, opt-outs and interested replies to the matching label.
+
+`sample-sites/leads.json` is an optional local notes file. It is git-ignored and must never be committed (it lists business contact details and the repo is public). If it is missing, carry on: Gmail has everything.
+
+After sending, check `from:mailer-daemon newer_than:1d` for bounces and label them `Outreach/Bounced`.
 
 ## 1. Handle replies first
 - Search Gmail for replies to our outreach threads (subject starts "A free website preview for"),
