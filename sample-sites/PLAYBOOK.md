@@ -3,7 +3,7 @@
 Muhammad Tayyab is a student web developer in Dublin. He sells websites to local businesses
 that don't have one. Outreach and replies go out from the connected Gmail account, vibecoders.ie@gmail.com.
 
-State lives in `sample-sites/leads.json`. Read it first, and update, commit and push it at the end of every run.
+State lives in `sample-sites/leads.json`. It is git-ignored and must never be committed: it lists business contact details and the repo is public. Read it first and update it at the end of every run.
 
 ## 1. Handle replies first
 - Search Gmail for replies to our outreach threads (subject starts "A free website preview for"),
