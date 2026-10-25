@@ -484,5 +484,113 @@
     "ink": "#f1efe9",
     "muted": "#a9a49b",
     "line": "#2d2d2d"
+  },
+  {
+    "slug": "blackbeard-barbershop",
+    "name": "BlackBeard Barbershop",
+    "area": "Dublin 1",
+    "headline": "Dublin 1's top-rated barbers.",
+    "tagline": "Haircuts, beard trims and hot towel shaves at Liberty Corner, James Joyce Street, rated 4.9 stars by thousands of customers.",
+    "services_title": "In the chair",
+    "services": [
+      [
+        "✂️",
+        "Haircuts",
+        "Classic and modern men's cuts by experienced barbers."
+      ],
+      [
+        "🧔",
+        "Beard Trims",
+        "Shaping, line-ups and full beard sculpting."
+      ],
+      [
+        "🔥",
+        "Hot Towel Shave",
+        "A traditional straight-razor shave, done properly."
+      ],
+      [
+        "💈",
+        "Skin Fades",
+        "Sharp, seamless fades every time."
+      ]
+    ],
+    "about_title": "A select barbershop in the north inner city",
+    "about": [
+      "BlackBeard Barbershop is at Unit 9, Liberty Corner, James Joyce Street, offering a select range of barbering treatments for men.",
+      "Thousands of customers rate us 4.9 out of 5. Walk in or book ahead."
+    ],
+    "badge_big": "4.9★",
+    "badge_small": "from thousands of reviews",
+    "address": "Unit 9, Liberty Corner, James Joyce Street, Dublin 1, D01 K7N1",
+    "phone": "+353 83 088 2425",
+    "email": "blackbeardireland@gmail.com",
+    "hours": "Monday to Saturday 9:00 to 20:00 · Sunday 11:00 to 17:00",
+    "cta_title": "Book your next cut",
+    "cta_text": "Call and we'll fit you in.",
+    "book_label": "Call to book",
+    "font": "Oswald",
+    "accent": "#d4a017",
+    "accent_ink": "#101010",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #33290f 0%, transparent 60%), linear-gradient(180deg,#161616,#101010)",
+    "badge_bg": "linear-gradient(135deg,#d4a017,#8c6a0c)",
+    "bg": "#101010",
+    "surface": "#1a1a1a",
+    "ink": "#f2efe9",
+    "muted": "#a7a29a",
+    "line": "#2b2b2b"
+  },
+  {
+    "slug": "the-best-barber",
+    "name": "The Best Barber",
+    "area": "Dundrum & Foxrock",
+    "headline": "Two shops. One standard: the best.",
+    "tagline": "Men's and children's haircuts and hot towel shaves on Main Street, Dundrum and Brighton Road, Foxrock.",
+    "services_title": "Services",
+    "services": [
+      [
+        "✂️",
+        "Men's Haircuts",
+        "Precise cuts and styling for every look."
+      ],
+      [
+        "👦",
+        "Children's Haircuts",
+        "Patient, friendly cuts for kids."
+      ],
+      [
+        "🔥",
+        "Hot Towel Shave",
+        "Relaxing, traditional close shaves."
+      ],
+      [
+        "🧔",
+        "Beard Trims",
+        "Neatly shaped and lined up."
+      ]
+    ],
+    "about_title": "South Dublin's neighbourhood barber",
+    "about": [
+      "The Best Barber looks after south Dublin from two shops: 15 Main Street, Dundrum and 4 Brighton Road, Foxrock.",
+      "Drop into whichever is closer, or call ahead."
+    ],
+    "badge_big": "2",
+    "badge_small": "shops in Dundrum & Foxrock",
+    "address": "15 Main Street, Dundrum, Dublin 14 · 4 Brighton Road, Foxrock, Dublin 18",
+    "phone": "+353 1 295 1133",
+    "email": "e.bestbarber@yahoo.ie",
+    "hours": "Dundrum: 01 295 1133 · Foxrock: 01 289 6524. Call for opening hours.",
+    "cta_title": "Due a fresh cut?",
+    "cta_text": "Call your nearest shop.",
+    "book_label": "Call Dundrum",
+    "font": "Playfair Display",
+    "bg": "#f7f5f1",
+    "surface": "#ffffff",
+    "ink": "#1d1a16",
+    "muted": "#6b645a",
+    "accent": "#1e3a5f",
+    "accent_ink": "#ffffff",
+    "line": "#e6e1d8",
+    "hero_bg": "radial-gradient(900px 420px at 85% 0%, #dde5ef 0%, transparent 60%), radial-gradient(600px 300px at 0% 100%, #efe7da 0%, transparent 60%)",
+    "badge_bg": "linear-gradient(135deg,#1e3a5f,#4b6f99)"
   }
 ]
