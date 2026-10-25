@@ -10,7 +10,17 @@ The source of truth is Gmail labels in vibecoders.ie@gmail.com: `Outreach/Contac
 After sending, check `from:mailer-daemon newer_than:1d` for bounces and label them `Outreach/Bounced`.
 
 ## 0. Legal rules (Ireland). These override everything below.
-- **Cold outreach is PAUSED until Muhammad says to resume.** Until then, only handle replies.
+- Daily plan (agreed 2026-10-25): up to 5 replies to public "looking for a web developer / website" posts (Track A,
+  Ireland or international), plus up to 5 cold emails to Irish *registered companies* (Track B). No international cold email.
+- Track A is a reply to someone's own request, so it is not unsolicited marketing. Only reply where the post invites contact
+  (gives an email or says "email me"), is recent (under 30 days), and is not on a platform whose rules forbid moving off-platform
+  (Upwork, Fiverr, Freelancer, PeoplePerHour: list those for Muhammad to apply to himself instead).
+- Track A emails: short, specific to their request, link to a relevant sample if one fits, give the three packages, offer a quick call.
+  Subject: "Re: your website request - <their project in a few words>".
+- Track A sources to check each run (web search only; most sites can't be fetched): Activelink tenders (activelink.ie/vacancies/tenders,
+  community and charity RFQs), Reddit r/forhire [Hiring] posts, Gumtree/Adverts.ie "wanted" ads. Bark.ie, PeoplePerHour, Upwork, Fiverr
+  and eTenders need Muhammad's own account: list good matches for him to apply to, never contact those leads off-platform.
+- Irish leads: mention the Local Enterprise Office Trading Online Voucher: it covers 50% of eligible costs (excl. VAT) up to EUR 2,500, but the business must be trading 6+ months, have 10 or fewer staff, attend a LEO seminar, and get approval BEFORE any work or payment. Never promise approval.
 - Under S.I. 336/2011 (Reg. 13), cold marketing email to an individual (a sole trader, or a personal
   Gmail/Hotmail/Yahoo address belonging to a person) needs their prior consent. Cold email is only allowed to a
   company (a "Ltd"/DAC/CLG registered with the CRO) at a business address. So, when outreach resumes:
